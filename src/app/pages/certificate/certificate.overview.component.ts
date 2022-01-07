@@ -10,7 +10,7 @@ import { Certificate } from './certificate';
       <h1>Awards, certificates, courses and conferences</h1>
       <ng-container *ngIf="certificates$ | async as certificates">
         <table class="table table-striped table-responsive">
-          <thead class="thead-dark">
+          <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>

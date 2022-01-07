@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { faWater } from '@fortawesome/free-solid-svg-icons';
 import { Project } from './project';
 
 @Component({
@@ -12,7 +13,8 @@ import { Project } from './project';
       >
         <div class="card-header">
           <span
-            ><i class="fa" [ngClass]="project.icon"></i>
+><!--<fa-icon [icon]="faWater"></fa-icon>-->
+            <i class="fa" [ngClass]="project.icon"></i>
             {{ project.client }}</span
           >
         </div>
@@ -26,7 +28,7 @@ import { Project } from './project';
           <div *ngIf="project.technologies" class="text-center">
             <span
               *ngFor="let technology of project.technologies"
-              class="badge badge-pill badge-dark ms-1"
+              class="badge rounded-pill badge-dark ms-1"
               >{{ technology }}</span
             >
           </div>
@@ -41,6 +43,8 @@ import { Project } from './project';
   styleUrls: ['project.card.component.scss']
 })
 export class ProjectCardComponent {
+  faWater = faWater;
+
   @Input()
   left: boolean;
 
