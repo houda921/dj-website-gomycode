@@ -29,7 +29,7 @@ import { Certificate } from './certificate';
                 ></ngb-highlight>
                 <a
                   *ngIf="certificate.credentialUrl.length > 0"
-                  class="ml-1"
+                  class="ms-1"
                   target="_blank"
                   href="{{ certificate.credentialUrl }}"
                   ><i class="fa fa-external-link"></i
