@@ -69,7 +69,7 @@
     "jest": "^26",
     "jest-cli": "^26",
     "jest-preset-angular": "^8",
-    "ng-mocks": "^11",
+    "ng-mocks": "^12.5.1",
     "prettier": "^2",
     "typescript": "^4",
     "zone.js": "^0"
