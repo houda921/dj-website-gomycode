@@ -9,7 +9,11 @@
     "test": "jest",
     "test-with-coverage": "jest --collect-coverage",
     "test-watch": "jest --watch",
-    "lint": "npx tsc --noEmit && eslint . --ext ts,json --quiet --fix"
+    "lint": "npx tsc --noEmit && eslint . --ext ts,json --quiet --fix",
+    "docker-login": "aws ecr get-login-password --region eu-west-3 | docker login --username AWS --password-stdin 082272919318.dkr.ecr.eu-west-3.amazonaws.com",
+    "docker-build": "docker build -t dj-website-frontend .",
+    "docker-tag": "docker tag dj-website-frontend:latest 082272919318.dkr.ecr.eu-west-3.amazonaws.com/dj-website-frontend:latest",
+    "docker-push": "docker push 082272919318.dkr.ecr.eu-west-3.amazonaws.com/dj-website-frontend:latest"
   },
   "private": true,
   "dependencies": {
@@ -71,7 +75,7 @@
     "zone.js": "^0"
   },
   "engines": {
-    "node": "14.16.0",
-    "npm": "7.6.0"
+    "node": "16.13.1",
+    "npm": "8.3.0"
   }
 }
