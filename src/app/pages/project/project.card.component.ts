@@ -28,7 +28,7 @@ import { Project } from './project';
           <div *ngIf="project.technologies" class="text-center">
             <span
               *ngFor="let technology of project.technologies"
-              class="badge rounded-pill badge-dark ms-1"
+              class="badge rounded-pill bg-dark text-white ms-1"
               >{{ technology }}</span
             >
           </div>
