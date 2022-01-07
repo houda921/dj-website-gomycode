@@ -1,6 +1,6 @@
 # stage 1
 
-FROM node:alpine AS my-app-build
+FROM node:16 AS my-app-build
 WORKDIR /app
 COPY . .
 RUN npm ci && npm run-script build
