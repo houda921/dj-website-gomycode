@@ -6,6 +6,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from '../app-routing.module';
 import {HamburgerToggleDirective} from './hamburger-toggle.directive';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     CommonModule,
     NgbModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ]
 })
 export class HeaderModule {}

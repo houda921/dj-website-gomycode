@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CertificateService } from './certificate.service';
 import { Observable } from 'rxjs';
 import { Certificate } from './certificate';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'certificate-overview',
@@ -32,7 +33,7 @@ import { Certificate } from './certificate';
                   class="ms-1"
                   target="_blank"
                   href="{{ certificate.credentialUrl }}"
-                  ><i class="fa fa-external-link"></i
+                  ><fa-icon [icon]='faExternalLink'></fa-icon
                 ></a>
               </td>
               <td>
@@ -69,6 +70,8 @@ import { Certificate } from './certificate';
 })
 export class CertificateOverviewComponent implements OnInit {
   certificates$: Observable<Certificate[]>;
+
+  faExternalLink = faExternalLinkAlt;
 
   constructor(private certificateService: CertificateService) {}
 

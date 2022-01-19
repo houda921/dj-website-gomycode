@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { faWater } from '@fortawesome/free-solid-svg-icons';
 import { Project } from './project';
 
 @Component({
@@ -12,10 +11,7 @@ import { Project } from './project';
         [ngClass]="left ? 'projects-content-left' : 'projects-content-right'"
       >
         <div class="card-header">
-          <span
-><!--<fa-icon [icon]="faWater"></fa-icon>-->
-            <i class="fa" [ngClass]="project.icon"></i>
-            {{ project.client }}</span
+          <span>{{ project.client }}</span
           >
         </div>
         <div class="card-body">
@@ -43,7 +39,6 @@ import { Project } from './project';
   styleUrls: ['project.card.component.scss']
 })
 export class ProjectCardComponent {
-  faWater = faWater;
 
   @Input()
   left: boolean;

@@ -1,24 +1,22 @@
-<header class="header">
-  <div class="theme pt-3">
-    <div class="d-flex justify-content-center"><img class="image-banner" src="assets/images/banner.png" routerLink=""></div>
+<header class="header theme">
+  <div class="name-title hidden-desktop">
+    <h1 class='name'>Dieter Jordens</h1>
+    <h2 class='function'>Freelance Software & Data Engineer</h2>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light theme">
-    <div class="ms-auto me-auto hidden-desktop">
-      <button class="hamburger hamburger--spring" [class.is-active]="!collapse" type="button" (click)="toggle()">
+  <nav>
+    <div class="hidden-desktop hamburger-container">
+      <button class="hamburger hamburger--slider" aria-label="Menu" aria-controls="navigation" [class.is-active]="!collapse" type="button" (click)="toggle()">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>
     </div>
-    <div class="navbar-nav hidden-mobile" style="width:100%">
-      <app-nav-options class="ms-auto me-auto"></app-nav-options>
+    <div class="navigation-bar-desktop hidden-mobile">
+      <div class="d-flex justify-content-center banner-image-container"><img class='banner-image' src="assets/images/banner.png"></div>
+      <app-nav-options></app-nav-options>
     </div>
   </nav>
-  <div class="container hidden-desktop theme dropdown-nav-options" [@collapse]="collapse">
-    <div class="row">
-      <div class="col d-flex justify-content-center">
-        <app-nav-options class="me-auto" (navigated)="toggle()"></app-nav-options>
-      </div>
-    </div>
+  <div class="hidden-desktop dropdown-nav-options" [@collapse]="collapse">
+    <app-nav-options (navigated)="toggle()"></app-nav-options>
   </div>
 </header>

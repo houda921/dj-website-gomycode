@@ -6,9 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --aot --configuration production",
-    "test": "jest",
-    "test-with-coverage": "jest --collect-coverage",
-    "test-watch": "jest --watch",
+    "test": "ng test",
     "lint": "npx tsc --noEmit && eslint . --ext ts,json --quiet --fix",
     "docker-login": "aws ecr get-login-password --region eu-west-3 | docker login --username AWS --password-stdin 082272919318.dkr.ecr.eu-west-3.amazonaws.com",
     "docker-build": "docker build -t dj-website-frontend .",
@@ -30,6 +28,7 @@
     "@angular/router": "^13.1.1",
     "@fortawesome/angular-fontawesome": "^0.10.1",
     "@fortawesome/fontawesome-svg-core": "~1.2",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@ng-bootstrap/ng-bootstrap": "^11",
     "bootstrap": "~5.1",
@@ -42,34 +41,22 @@
     "ng-lazyload-image": "^9",
     "rxjs": "^6"
   },
-  "jest": {
-    "collectCoverage": true,
-    "coverageThreshold": {
-      "global": {
-        "branches": 0,
-        "functions": 0,
-        "lines": 0,
-        "statements": 0
-      }
-    },
-    "preset": "jest-preset-angular",
-    "setupFilesAfterEnv": [
-      "./src/setup-jest.ts"
-    ]
-  },
   "devDependencies": {
     "@angular-devkit/build-angular": "^13.1.1",
     "@angular/cli": "^13.1.1",
     "@angular/language-service": "^13.1.1",
-    "@types/jest": "^26",
     "@types/node": "^15",
     "@typescript-eslint/eslint-plugin": "^4",
     "@typescript-eslint/parser": "^4",
     "eslint": "^7",
     "eslint-config-prettier": "^8",
-    "jest": "^26",
-    "jest-cli": "^26",
-    "jest-preset-angular": "^8",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "^2.1",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.7",
+    "jasmine-core": "~4",
+    "@types/jasmine": "~3.10",
     "ng-mocks": "^12.5.1",
     "prettier": "^2",
     "typescript": "^4.5.4",

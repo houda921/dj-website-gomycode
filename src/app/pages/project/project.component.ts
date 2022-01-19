@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
   template: `
     <div class="container-fluid pt-2">
       <div class="project-wrapper">
-        <h1>Projects</h1>
         <div class="card">
           <div class="card-body">
             <p class="pb-2">

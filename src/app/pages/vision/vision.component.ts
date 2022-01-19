@@ -23,7 +23,7 @@ import { Observable } from 'rxjs';
       </div>
       <div class="software-craftsmanship-values">
         <div class="row">
-          <div class='col-3' *ngFor="let card of cards$ | async">
+          <div class='.col-lg-3 pb-2' *ngFor="let card of cards$ | async">
             <app-software-craftsmanship-card
               class="card"
               [card]="card"

@@ -15,7 +15,7 @@ Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
-Run `npm run-script test` to execute the unit tests via Jest. 
+Run `npm run-script test` to execute the unit tests. 
 Because this is a personal project and mainly used for experimentation, not everything is under test. 
 I do not recommend working this way, as a website gets more complex when it grows. Because I'm the 
 only maintainer, I'm aware of the risks and advantages of this approach. In general I prefer to work

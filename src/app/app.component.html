@@ -1,23 +1,27 @@
-<app-header></app-header>
-<main class="body">
-  <router-outlet></router-outlet>
-</main>
-<footer class="footer mt-3">
+<div class='app-container'>
+  <div class='header-container'>
+    <app-header></app-header>
+  </div>
+  <main class="body">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+<footer class="footer">
   <div class="text-center">
     <ul class="social-media-list">
       <li>
-        <a href="https://www.linkedin.com/in/dieterjordens"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/dieterjordens"><fa-icon [icon]='faLinkedin'></fa-icon></a>
       </li>
       <li>
-        <a href="https://twitter.com/Dieter_Jordens"><i class="fa fa-twitter"></i></a>
+        <a href="https://twitter.com/Dieter_Jordens"><fa-icon [icon]='faTwitter'></fa-icon></a>
       </li>
       <li>
-        <a href="https://dieterjordens.medium.com/"><i class="fa fa-medium"></i></a>
+        <a href="https://dieterjordens.medium.com/"><fa-icon [icon]='faMedium'></fa-icon></a>
       </li>
       <li>
-        <a href="mailto:dieter.jordens.consulting@gmail.com"><i class="fa fa-envelope-o"></i></a>
+        <a href="mailto:dieter.jordens.consulting@gmail.com"><fa-icon [icon]='faEnvelope'></fa-icon></a>
       </li>
     </ul>
-    <span><i class="fa fa-copyright"></i> Dieter Jordens IT Consulting | BE 0767.861.205</span>
+    <span><fa-icon [icon]='faCopyRight'></fa-icon> Dieter Jordens IT Consulting | BE 0767.861.205</span>
   </div>
 </footer>

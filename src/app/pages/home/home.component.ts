@@ -13,7 +13,7 @@ import moment from 'moment';
               Together we solve your daily software problems with years of experience. </p>
           </div>
           <div class='grid-child'>
-            <img class='image' height='200px' src="assets/images/cartoon.png">
+            <img class='image' height='235.2px' src="assets/images/cartoon.png">
           </div>
         </div>
       </div>

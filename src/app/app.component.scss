@@ -1,10 +1,28 @@
 @import "../colors";
 
+@media only screen and (min-width: 1001px) {
+  .header-container {
+    flex: 1;
+    border-right: 1px solid #9f9f9f;
+    box-shadow: 2px 0 4px -3px #3f3f3f;
+    -moz-box-shadow: 2px 0 4px -3px #3f3f3f;
+    -webkit-box-shadow: 2px 0 4px -3px #3f3f3f;
+    margin-right: 2px;
+  }
+  .body {
+    flex: 9;
+  }
+  .app-container {
+    display: flex;
+  }
+}
+
 .body {
-  background-color: $background-color;
-  font-family: Roboto, serif;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
+  background: linear-gradient(90deg, #F8F8F8 6px, transparent 1%) center, linear-gradient(#F8F8F8 6px, transparent 1%) center, #D1D1D1;
+  background-size: 7px 7px;
 }
 
 .footer {

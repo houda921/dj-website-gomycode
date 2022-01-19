@@ -1,8 +1,36 @@
 @import "../../../colors";
 
+
+@media only screen and (max-width: 400px) {
+  .text-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .image {
+    display: none;
+  }
+  .text-header{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .text-header{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
 .title {
   font-size: 3em;
-  padding-right: 50px;
 }
 
 .header {
@@ -24,42 +52,3 @@
 .about {
   font-family: "Montserrat", sans-serif;
 }
-
-
-
-@media only screen and (max-width: 400px) {
-  .text-header {
-    width: 400px;
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-}
-
-@media only screen and (min-width: 401px) {
-  .text-header {
-    width: 420px;
-  }
-
-  .header{
-    padding-left: 25%;
-    padding-right: 25%;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .image {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 1001px) {
-  .image{
-    padding-left: 200px;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-

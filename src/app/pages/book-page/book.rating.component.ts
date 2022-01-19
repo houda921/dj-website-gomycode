@@ -1,24 +1,19 @@
 import { Component, Input } from '@angular/core';
 
+import { faStar, faStarHalf} from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'book-rating',
   template: `
-    <div class="book-rating" data-jest="stars">
-      <span
+    <div class="book-rating">
+      <fa-icon
         *ngFor="let fullStar of fullStars"
-        class="fa fa-star checked"
-        data-jest="full star"
-      ></span>
-      <span
+        [icon]='faStar'
+      ></fa-icon>
+      <fa-icon
         *ngIf="hasAnHalfStar"
-        class="fa fa-star-half-empty"
-        data-jest="half star"
-      ></span>
-      <span
-        *ngFor="let emptyStar of emptyStars"
-        class="fa fa-star-o"
-        data-jest="empty star"
-      ></span>
+        [icon]="faHalfStar"
+      ></fa-icon>
     </div>
   `,
   styles: [
@@ -37,6 +32,9 @@ import { Component, Input } from '@angular/core';
 })
 export class BookRatingComponent {
   private readonly MAX_NUMBER_OF_STARS = 5;
+
+  faStar = faStar;
+  faHalfStar = faStarHalf;
 
   @Input()
   rating = 0;

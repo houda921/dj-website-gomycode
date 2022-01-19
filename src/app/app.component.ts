@@ -1,7 +1,9 @@
-import {AfterViewInit, Component, OnDestroy} from '@angular/core';
-import {NavigationEnd, Router} from '@angular/router';
-import {Subscription} from 'rxjs';
-import {filter} from 'rxjs/operators';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
+import { faFacebook, faLinkedin, faMedium, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faCopyright, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 declare let gtag: any;
 
@@ -12,6 +14,13 @@ declare let gtag: any;
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
   private routerSubscription: Subscription;
+
+  faFacebook = faFacebook;
+  faLinkedin = faLinkedin;
+  faTwitter = faTwitter;
+  faMedium = faMedium;
+  faEnvelope = faEnvelope;
+  faCopyRight = faCopyright;
 
   constructor(private router: Router) {}
 

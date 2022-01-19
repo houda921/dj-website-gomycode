@@ -7,6 +7,9 @@ import { BookComponent } from './book.component';
 import { BookRatingComponent } from './book.rating.component';
 import { ImageModule } from '../../common/image.module';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BookHttpInterceptor } from './book.http.interceptor';
 
 @NgModule({
   imports: [
@@ -14,12 +17,19 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     NgbModule,
     DataModule,
     ImageModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    FontAwesomeModule
   ],
   declarations: [
     BookComponent,
     BooksPageComponent,
     BookRatingComponent
-  ]
+  ],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: BookHttpInterceptor,
+    multi: true
+  }]
 })
-export class BookModule {}
+export class BookModule {
+}

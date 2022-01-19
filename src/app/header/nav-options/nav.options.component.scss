@@ -1,22 +1,52 @@
 @import "../../../colors";
 
-.hvr-overline-from-center:before {
-  background: #ffffff;
-  overflow: hidden;
+
+@media only screen and (min-width: 1001px) {
+  .navbar-nav {
+    border-top: solid 1px #ddd;
+  }
+  .active {
+    border-left: 4px solid;
+    background-color: #fbfbfb;
+  }
 }
 
 .nav-item {
-  font-size: 1.2rem;
+  color: #333;
 }
 
-.nav-item :not(.active) {
-  color: #FFFFFF;
+.nav-item:hover {
+  background-color: #fafafa;
+  transition: background-color 0.2s ease, border-left-width 0.2s ease;
+  cursor: pointer;
 }
 
-.nav-item:hover :not(.active) {
-  color: #FFFFFF;
+.nav-item:hover {
+  border-left: 4px solid;
 }
 
-.nav-item.active .nav-link.navigation {
-  color: #FFFFFF;
+.nav-item {
+  font-size: 2rem;
+}
+
+.float-child-1 {
+  width: 3rem;
+  float: left;
+}
+
+.float-child-2 {
+  padding-left: 1rem;
+  float: left;
+}
+
+.icon {
+  text-align: center;
+}
+
+.text {
+  font-size: 16px;
+  display: block;
+  line-height: 16px;
+  padding-bottom: 16px;
+  padding-top: 16px;
 }
