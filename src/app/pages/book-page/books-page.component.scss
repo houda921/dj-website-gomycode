@@ -13,7 +13,7 @@
   grid-template-columns: 1fr;
 }
 
-@media screen and (min-width: 960px) {
+@media only screen and (min-width: 960px) {
   .books-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -24,7 +24,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
   .books-container {
     grid-template-columns: repeat(3, 1fr);
     padding-left: 5em;

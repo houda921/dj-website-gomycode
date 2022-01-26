@@ -4,50 +4,59 @@ import moment from 'moment';
 @Component({
   selector: 'app-home',
   template: `
-    <div class="home">
-      <div class="header">
-        <div class="pb-3 pt-5 about grid-container">
-          <div class='grid-child text-header'>
-            <h1 class="title">I Change Your Data Into Value</h1>&nbsp;
-            <p> My job as a data engineer is to analyse data and make it usable.
-              Together we solve your daily software problems with years of experience. </p>
-          </div>
-          <div class='grid-child'>
-            <img class='image' height='235.2px' src="assets/images/cartoon.png">
+    <div class='home'>
+      <h1 class='page-title'>About</h1>
+      <div class='header'>
+        <div class='pb-3 pt-5'>
+          <div class='text-header'>
+            <h2 class='title'>
+              {{ 'A freelance software developer with a mission' | titlecase }}
+            </h2>
+            <span class='intro'>Welcome to the website of Dieter Jordens IT Consulting.
+              In May 2021, I founded my own company.
+              This allows me to choose my projects myself.
+              I like to focus on data related assignments.
+              For every assignment, I find quality to be incredibly important.
+              That is how I like to make a difference.
+              On my website you can learn more about my vision of software development.
+              You will also be able to view my career history and assignments.
+              Finally, I find knowledge sharing very important, both at work and outside work.
+              So on my website, you can find my blog, where I actively try to share knowledge.
+              I also try to keep track of the resources I consulted: books, conferences, workshops, etc.</span>
           </div>
         </div>
       </div>
-      <div class="slant"></div>
-      <div class="container home">
+      <div class='slant'></div>
+      <div class='container home'>
         <h2 class='pb-3'>Frequently Asked Questions</h2>
-        <div id="accordion">
+        <div id='accordion'>
           <app-faq-option
             question="What is Dieter's background?"
-            [answer]="backgroundDieter"
+            [answer]='backgroundDieter'
           ></app-faq-option>
           <app-faq-option
-            question="How much back-end experience does he have?"
-            [answer]="backend"
+            question='How much back-end experience does he have?'
+            [answer]='backend'
           >
           </app-faq-option>
           <app-faq-option
-            question="Does Dieter have front-end experience?"
-            [answer]="frontend"
+            question='Does Dieter have front-end experience?'
+            [answer]='frontend'
           >
           </app-faq-option>
           <app-faq-option
-            question="Does he know how to deliver software?"
-            [answer]="softwareDelivery"
+            question='Does he know how to deliver software?'
+            [answer]='softwareDelivery'
           >
           </app-faq-option>
           <app-faq-option
-            question="What is his experience with Artificial Intelligence?"
-            [answer]="ai"
+            question='What is his experience with Artificial Intelligence?'
+            [answer]='ai'
           >
           </app-faq-option>
           <app-faq-option
-            question="What does Dieter do for the community?"
-            [answer]="givingBack"
+            question='What does Dieter do for the community?'
+            [answer]='givingBack'
           >
           </app-faq-option>
         </div>
@@ -58,9 +67,9 @@ import moment from 'moment';
 })
 export class HomeComponent {
   backgroundDieter = `
-      <div class="row align-items-center">
-        <div class="col">
-          <p class="text-justify">
+      <div class='row align-items-center'>
+        <div class='col'>
+          <p class='text-justify'>
             Dieter is currently working as a software and data engineer for his first client as a freelancer: Aquafin NV.
             He has a master degree in Computer Science from KU Leuven.
             In this master, he specialised himself in Artificial Intelligence.
@@ -68,25 +77,25 @@ export class HomeComponent {
             He wants to make a positive contribution to the world, which has been changing ever faster.
             He wants to create value.
             Dieter is now ${moment().diff(
-                moment('12-25-1992', 'MM-DD-YYYY'),
-                'years'
-              )} years old.
+    moment('12-25-1992', 'MM-DD-YYYY'),
+    'years'
+  )} years old.
             During his career as a consultant, he did various projects.
             Each time a new challenge arose, Dieter trained himself for the success of the projects.
           </p>
         </div>
-        <div class="col-3 hidden-mobile d-flex justify-content-center">
-          <img src="../../../assets/images/me.png" height="200" />
+        <div class='col-3 hidden-mobile d-flex justify-content-center'>
+          <img src='../../../assets/images/me.png' height='200' />
         </div>
       </div>
   `;
   backend = `
-      <div class="row align-items-center">
-        <div class="col-3 hidden-mobile d-flex justify-content-center">
-          <img src="../../../assets/images/backend.png" height="200" />
+      <div class='row align-items-center'>
+        <div class='col-3 hidden-mobile d-flex justify-content-center'>
+          <img src='../../../assets/images/backend.png' height='200' />
         </div>
-        <div class="col">
-          <p class="text-justify">
+        <div class='col'>
+          <p class='text-justify'>
             Dieter often had to make modifications to backend applications in the past.
             Dieter realizes that every project is different and brings its challenges, which he is only too happy to meet.
             In the past, Dieter often used Java and related technologies in his projects. Still, he is also very fond of Python.
@@ -99,9 +108,9 @@ export class HomeComponent {
       </div>
   `;
   frontend = `
-      <div class="row align-items-center">
-        <div class="col">
-          <p class="text-justify">
+      <div class='row align-items-center'>
+        <div class='col'>
+          <p class='text-justify'>
             Dieter has never avoided doing front-end development.
             At the beginning of his career, his front-end skills existed of HTML, JavaScript and CSS.
             Over the years, he has expanded his knowledge on front-end development, investing in responsive design and
@@ -111,18 +120,18 @@ export class HomeComponent {
             If there is one thing he realised, learning never stops in the fast-changing front-end world.
           </p>
         </div>
-        <div class="col-3 hidden-mobile d-flex justify-content-center">
-          <img src="../../../assets/images/frontend.png" height="200" />
+        <div class='col-3 hidden-mobile d-flex justify-content-center'>
+          <img src='../../../assets/images/frontend.png' height='200' />
         </div>
       </div>
   `;
   softwareDelivery = `
-      <div class="row align-items-center">
-        <div class="col-3 hidden-mobile d-flex justify-content-center">
-          <img src="../../../assets/images/shipment.png" height="200" />
+      <div class='row align-items-center'>
+        <div class='col-3 hidden-mobile d-flex justify-content-center'>
+          <img src='../../../assets/images/shipment.png' height='200' />
         </div>
-        <div class="col">
-          <p class="text-justify">
+        <div class='col'>
+          <p class='text-justify'>
             Today, writing software alone won't get you far.
             Delivering software is essential.
             Without delivery, there is no value.
@@ -139,9 +148,9 @@ export class HomeComponent {
       </div>
   `;
   ai = `
-      <div class="row align-items-center">
-        <div class="col">
-          <p class="text-justify">
+      <div class='row align-items-center'>
+        <div class='col'>
+          <p class='text-justify'>
             Before you can run, you'll have to learn how to walk.
             In Dieter's first years as a software developer, his primary focus was on building applications.
             Dieter did not give up on Artificial Intelligence. Every career step he has made is
@@ -156,18 +165,18 @@ export class HomeComponent {
             and identification application.
           </p>
         </div>
-        <div class="col-3 hidden-mobile d-flex justify-content-center">
-          <img src="../../../assets/images/ai.png" height="200" />
+        <div class='col-3 hidden-mobile d-flex justify-content-center'>
+          <img src='../../../assets/images/ai.png' height='200' />
         </div>
       </div>
   `;
   givingBack = `
-      <div class="row align-items-center">
-        <div class="col-3 hidden-mobile d-flex justify-content-center">
-          <img src="../../../assets/images/coaching.png" height="200" />
+      <div class='row align-items-center'>
+        <div class='col-3 hidden-mobile d-flex justify-content-center'>
+          <img src='../../../assets/images/coaching.png' height='200' />
         </div>
-        <div class="col">
-          <p class="text-justify">
+        <div class='col'>
+          <p class='text-justify'>
             As a data and software engineer Dieter likes to give something back to the community.
             He likes to share his knowledge with others and loves to learn based on the feedback he receives.
             He is open to learning from anyone, critical if needed and tries never to be blinded by his own opinions.

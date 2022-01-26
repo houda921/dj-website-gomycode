@@ -18,7 +18,7 @@
   max-width: 450px;
 }
 
-@media screen and (min-width: 960px) {
+@media only screen and (min-width: 960px) {
   .articles-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -29,7 +29,7 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
   .articles-container {
     grid-template-columns: repeat(3, 1fr);
     padding-left: 5em;

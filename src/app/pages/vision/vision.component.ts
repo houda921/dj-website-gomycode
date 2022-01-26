@@ -6,29 +6,26 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-vision',
   template: `
-    <div class="container-fluid pt-2">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title">
-            Software Development is a Craft
-          </h5>
-          <div class='card-text-software'>
-            <p class="card-text">
-              Dieter realises software is expensive and therefore chooses to work in a qualitative way. Doing it right from the first time saves you a lot of money.
-              That is why he applies the principles of the <a href='https://agilemanifesto.org/principles.html'>Agile Manifesto</a> in his work.
-              Working qualitative does not mean slow, but rather structured. To move forward, you have to be critical to your work, day in and day out.
-            </p>
-          </div>
-        </div>
+    <div class='vision'>
+      <h1 class='page-title'>craftsmanship</h1>
+      <div class='header'>
+        <h2 class='title'>
+          {{ 'entrust your work to someone who values quality' | titlecase }}
+        </h2>
+        <span class='intro'>
+          Research shows that large software projects often fail.
+          This was true in the past, but is still the case.
+          By relying on real professionals, you can avoid many problems.
+          But how do you recognise so-called 'craftsmanship'?
+          That is what the experts in my field unanimously agree on and that is why they have set up a manifesto.
+          I try to adhere to this so-called <a href='https://agilemanifesto.org/principles.html'>agile manifesto</a> on a daily basis.
+          In this way, I try to contribute to projects that are successful.
+          Below are the four principles that we try to adhere to on a daily basis.
+        </span>
       </div>
-      <div class="software-craftsmanship-values">
-        <div class="row">
-          <div class='.col-lg-3 pb-2' *ngFor="let card of cards$ | async">
-            <app-software-craftsmanship-card
-              class="card"
-              [card]="card"
-            ></app-software-craftsmanship-card>
-          </div>
+      <div class='cards'>
+        <div class='card-wrapper' *ngFor='let card of cards$ | async'>
+          <app-software-craftsmanship-card class='card' [card]='card'></app-software-craftsmanship-card>
         </div>
       </div>
     </div>

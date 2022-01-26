@@ -8,11 +8,8 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .image {
-    display: none;
-  }
-  .text-header{
+@media only screen and (min-width: 401px) and (max-width: 1000px) {
+  .text-header {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -23,7 +20,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .text-header{
+  .text-header {
     padding-left: 5rem;
     padding-right: 5rem;
   }
@@ -49,6 +46,16 @@
   overflow: hidden;
 }
 
-.about {
-  font-family: "Montserrat", sans-serif;
+.intro {
+  font-family: Roboto, sans-serif;
+  line-height: 1.7rem;
+}
+
+.page-title {
+  font-weight: 200;
+  padding: 2rem 5rem;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: #008073 !important;
+  color: #FFFFFF !important;
 }
