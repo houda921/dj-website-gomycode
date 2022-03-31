@@ -1,31 +1,65 @@
 import { Component } from '@angular/core';
-import { Card } from './software-craftsmanship-card/card';
-import { CardService } from './software-craftsmanship-card/card.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-vision',
   template: `
     <div class='vision'>
-      <h1 class='page-title'>craftsmanship</h1>
+      <h1 class='page-title' translate>page.title.vision</h1>
       <div class='header'>
-        <h2 class='title'>
-          {{ 'entrust your work to someone who values quality' | titlecase }}
-        </h2>
-        <span class='intro'>
-          Research shows that large software projects often fail.
-          This was true in the past, but is still the case.
-          By relying on real professionals, you can avoid many problems.
-          But how do you recognise so-called 'craftsmanship'?
-          That is what the experts in my field unanimously agree on and that is why they have set up a manifesto.
-          I try to adhere to this so-called <a href='https://agilemanifesto.org/principles.html'>agile manifesto</a> on a daily basis.
-          In this way, I try to contribute to projects that are successful.
-          Below are the four principles that we try to adhere to on a daily basis.
-        </span>
+        <h2 class='title' translate>vision.subtitle</h2>
+        <span class='intro' translate>vision.intro</span>
       </div>
       <div class='cards'>
-        <div class='card-wrapper' *ngFor='let card of cards$ | async'>
-          <app-software-craftsmanship-card class='card' [card]='card'></app-software-craftsmanship-card>
+        <div class='card-wrapper'>
+          <div class='card'>
+            <div class='text-center'>
+              <img [src]="'/assets/images/cogs.png'" height='200' [alt]="'vision.working.software' | translate" />
+            </div>
+            <div class='card-body'>
+              <h5 class='card-title' translate>vision.working.software</h5>
+              <p class='card-text' translate>vision.software.quality</p>
+              <p class='card-text' translate>vision.keep.learning</p>
+              <p class='card-text' translate>vision.testing</p>
+            </div>
+          </div>
+        </div>
+        <div class='card-wrapper'>
+          <div class='card'>
+            <div class='text-center'>
+              <img [src]="'/assets/images/adding_value.png'" height='200' [alt]="'vision.change' | translate" />
+            </div>
+            <div class='card-body'>
+              <h5 class='card-title' translate>vision.change</h5>
+              <p class='card-text' translate>vision.rapid.progress</p>
+              <p class='card-text' translate>vision.honesty</p>
+              <p class='card-text' translate>vision.good.communication</p>
+            </div>
+          </div>
+        </div>
+        <div class='card-wrapper'>
+          <div class='card'>
+            <div class='text-center'>
+              <img [src]="'/assets/images/professional.png'" height='200' [alt]="'vision.individuals.and.interactions' | translate" />
+            </div>
+            <div class='card-body'>
+              <h5 class='card-title' translate>vision.individuals.and.interactions</h5>
+              <p class='card-text' translate>vision.discussions</p>
+              <p class='card-text' translate>vision.learn.and.adapt</p>
+              <p class='card-text' translate>vision.knowledge.sharing</p>
+            </div>
+          </div>
+        </div>
+        <div class='card-wrapper'>
+          <div class='card'>
+            <div class='text-center'>
+              <img [src]="'/assets/images/partnership.png'" height='200' [alt]="'vision.customer.collaboration' | translate" />
+            </div>
+            <div class='card-body'>
+              <h5 class='card-title' translate>vision.customer.collaboration</h5>
+              <p class='card-text' translate>vision.long.term.relationships</p>
+              <p class='card-text' translate>vision.contract.negotiation</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -33,9 +67,4 @@ import { Observable } from 'rxjs';
   styleUrls: ['./vision.component.scss']
 })
 export class VisionComponent {
-  cards$: Observable<Card[]>;
-
-  constructor(private cardService: CardService) {
-    this.cards$ = cardService.getCards$();
-  }
 }

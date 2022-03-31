@@ -1,73 +1,68 @@
-@import "../../../colors";
-
-.name {
-  font-size: 2.2rem;
-  font-weight: 700;
+.page-title {
+  font-weight: 200;
+  padding: 2rem 5rem;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: #008073 !important;
+  color: #FFFFFF !important;
 }
 
-.about {
-  font-size: 1rem;
+.header {
+  background-color: #31525b;
+  color: #fff;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 
-.cv-image {
-  height: 300px;
+@media only screen and (max-width: 400px) {
+  .header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .download-button-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+  .cv-frame {
+    display: none;
+  }
 }
 
-.image-container {
-  text-align: center;
+@media only screen and (min-width: 401px) and (max-width: 1000px) {
+  .header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .download-button-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  .cv-frame {
+    display: none;
+  }
 }
 
-.cv {
-  background-color: #fff;
-  word-break: break-word;
-  font-size: 1rem;
+@media only screen and (min-width: 1001px) {
+  .header {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .download-button-container {
+    display: none;
+  }
+  .cv-frame {
+    padding: 1rem;
+  }
 }
 
-.cv-right {
-  padding-left: 0;
-  padding-right: 0;
+.title {
+  font-size: 3rem;
+  font-family: Roboto, serif;
 }
 
-.section-title {
-  color: $carbon;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-.cvButton {
-  font-size: 1rem;
-  width: 100%;
-}
-
-.item {
-  padding-right: 3em;
-  font-size: 1.4rem;
-  margin-bottom: 1em;
-}
-
-.item h3 {
-  margin-bottom: 0;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.8em;
-  color: $black-color;
-}
-
-.item h4 {
-  font-size: 1rem;
-  line-height: 1em;
-  margin-bottom: 3px;
-  font-weight: 500;
-}
-
-.cv.border {
-  box-shadow: 2px 2px 2px 0;
-}
-
-.cv-image {
-  box-shadow: 3px 3px 1px 0;
-}
-
-.border {
-  color: $black-color;
+.intro {
+  font-family: Roboto, sans-serif;
+  line-height: 1.7rem;
 }

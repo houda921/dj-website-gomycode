@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { faFacebook, faLinkedin, faMedium, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faMedium, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faCopyright, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { TranslateService } from '@ngx-translate/core';
 
 declare let gtag: any;
 
@@ -15,19 +16,30 @@ declare let gtag: any;
 export class AppComponent implements AfterViewInit, OnDestroy {
   private routerSubscription: Subscription;
 
-  faFacebook = faFacebook;
   faLinkedin = faLinkedin;
   faTwitter = faTwitter;
   faMedium = faMedium;
   faEnvelope = faEnvelope;
   faCopyRight = faCopyright;
 
-  constructor(private router: Router) {}
+  currentLang: string;
+
+  private readonly LOCAL_STORAGE_LANGUAGE_KEY = 'current.language';
+
+  constructor(private router: Router,
+              private translateService: TranslateService) {
+    translateService.setDefaultLang('nl');
+    if(!localStorage.getItem(this.LOCAL_STORAGE_LANGUAGE_KEY)) {
+      localStorage.setItem(this.LOCAL_STORAGE_LANGUAGE_KEY, 'nl');
+    }
+    this.currentLang = localStorage.getItem(this.LOCAL_STORAGE_LANGUAGE_KEY);
+    this.translateService.use(this.currentLang);
+  }
 
   loadGoogleAnalytics(trackingID: string): void {
     const gaScript = document.createElement('script');
     gaScript.setAttribute('async', 'true');
-    gaScript.setAttribute('src', `https://www.googletagmanager.com/gtag/js?id=${ trackingID }`);
+    gaScript.setAttribute('src', `https://www.googletagmanager.com/gtag/js?id=${trackingID}`);
 
     const gaScript2 = document.createElement('script');
     gaScript2.innerText = `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag(\'js\', new Date());`;
@@ -47,6 +59,12 @@ export class AppComponent implements AfterViewInit, OnDestroy {
           page_path: event.urlAfterRedirects
         });
       });
+  }
+
+  changeLanguage(language: string): void {
+    localStorage.setItem(this.LOCAL_STORAGE_LANGUAGE_KEY, language);
+    this.currentLang = localStorage.getItem(this.LOCAL_STORAGE_LANGUAGE_KEY);
+    this.translateService.use(language);
   }
 
   ngOnDestroy(): void {

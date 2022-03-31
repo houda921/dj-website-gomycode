@@ -2,11 +2,11 @@ import {NgModule} from '@angular/core';
 import {HeaderComponent} from './header.component';
 import {NavOptionsComponent} from './nav-options/nav.options.component';
 import {CommonModule} from '@angular/common';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from '../app-routing.module';
 import {HamburgerToggleDirective} from './hamburger-toggle.directive';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -17,10 +17,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   exports: [HeaderComponent],
   imports: [
     CommonModule,
-    NgbModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    TranslateModule
   ]
 })
 export class HeaderModule {}

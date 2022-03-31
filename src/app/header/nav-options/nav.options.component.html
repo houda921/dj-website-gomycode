@@ -1,16 +1,68 @@
 <ul class='navbar-nav'>
-  <ng-container *ngFor='let navigationOption of navigationOptions'>
-    <li class='nav-item' [ngClass]='getActive(navigationOption.path)'
-        (click)='clickNavigation()'
-        routerLink='{{navigationOption.path}}'
-        [attr.data-navigation-option]='navigationOption.text'
-        [style.border-left-color]='navigationOption.iconColor'>
-      <div class="float-container">
-        <div class='float-child-1 icon'>
-          <fa-icon [icon]='navigationOption.icon' [style.color]='navigationOption.iconColor'></fa-icon>
-        </div>
-        <div class='float-child-2 text'>{{navigationOption.text}}</div>
+  <li class='nav-item' [ngClass]='getActive("")'
+      (click)='clickNavigation()'
+      routerLink=''
+      [style.border-left-color]="'#008073'">
+    <div class='float-container'>
+      <div class='float-child-1 icon'>
+        <fa-icon [icon]='faUser' [style.color]="'#008073'"></fa-icon>
       </div>
-    </li>
-  </ng-container>
+      <div class='float-child-2 text' translate>page.title.services</div>
+    </div>
+  </li>
+  <li class='nav-item' [ngClass]='getActive("vision")'
+      (click)='clickNavigation()'
+      routerLink='vision'
+      [style.border-left-color]="'#00bcd4'">
+    <div class='float-container'>
+      <div class='float-child-1 icon'>
+        <fa-icon [icon]="faChartLine" [style.color]="'#00bcd4'"></fa-icon>
+      </div>
+      <div class='float-child-2 text' translate>page.title.vision</div>
+    </div>
+  </li>
+  <li class='nav-item' [ngClass]='getActive("projects")'
+      (click)='clickNavigation()'
+      routerLink='projects'
+      [style.border-left-color]="'#9c27b0'">
+    <div class='float-container'>
+      <div class='float-child-1 icon'>
+        <fa-icon [icon]='faArchive' [style.color]="'#9c27b0'"></fa-icon>
+      </div>
+      <div class='float-child-2 text' translate>projects.title</div>
+    </div>
+  </li>
+  <li class='nav-item' [ngClass]='getActive("articles")'
+      (click)='clickNavigation()'
+      routerLink='articles'
+      [style.border-left-color]="'#ff9800'">
+    <div class='float-container'>
+      <div class='float-child-1 icon'>
+        <fa-icon [icon]='faBlog' [style.color]="'#ff9800'"></fa-icon>
+      </div>
+      <div class='float-child-2 text'>Blog</div>
+    </div>
+  </li>
+  <li class='nav-item' [ngClass]='getActive("books")'
+      (click)='clickNavigation()'
+      routerLink='books'
+      [style.border-left-color]="'#795548'">
+    <div class='float-container'>
+      <div class='float-child-1 icon'>
+        <fa-icon [icon]='faBookReader' [style.color]="'#795548'"></fa-icon>
+      </div>
+      <div class='float-child-2 text' translate='books.title'></div>
+    </div>
+  </li>
+  <li class='nav-item' [ngClass]='getActive("cv")'
+      (click)='clickNavigation()'
+      routerLink='cv'
+      [style.border-left-color]="'#3f51b5'">
+    <div class='float-container'>
+      <div class='float-child-1 icon'>
+        <fa-icon [icon]='faIdBadge' [style.color]="'#3f51b5'"></fa-icon>
+      </div>
+      <div class='float-child-2 text' translate='career.title'></div>
+    </div>
+  </li>
 </ul>

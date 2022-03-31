@@ -6,11 +6,13 @@ import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProjectHttpInterceptor } from './project.http.interceptor';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    TranslateModule
   ],
   declarations: [
     ProjectComponent,

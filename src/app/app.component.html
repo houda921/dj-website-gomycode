@@ -22,6 +22,6 @@
         <a href="mailto:dieter.jordens.consulting@gmail.com"><fa-icon [icon]='faEnvelope'></fa-icon></a>
       </li>
     </ul>
-    <span><fa-icon [icon]='faCopyRight'></fa-icon> Dieter Jordens IT Consulting | BE 0767.861.205</span>
+    <span><fa-icon [icon]='faCopyRight'></fa-icon>&nbsp;<span translate>company.name</span> | BE 0767.861.205 | <span class='language-select' *ngIf='currentLang === "nl"' (click)='changeLanguage("en")'><img class='flag' src='/assets/images/uk.svg'> English version</span><span class='language-select' *ngIf='currentLang === "en"' (click)='changeLanguage("nl")'><img class='flag' src='/assets/images/nl.svg'> Nederlandstalige versie</span></span>
   </div>
 </footer>

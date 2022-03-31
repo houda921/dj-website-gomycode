@@ -59,3 +59,21 @@
   background-color: #008073 !important;
   color: #FFFFFF !important;
 }
+
+@media only screen and (min-width: 901px) {
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .service {
+    margin: 1rem;
+  }
+}
+
+.services {
+  padding: 1rem;
+}
+
+.service {
+  padding: 1rem;
+}

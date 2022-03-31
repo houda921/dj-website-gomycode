@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { VisionComponent } from './vision.component';
-import { SoftwareCraftsmanshipCardComponent } from './software-craftsmanship-card/software-craftsmanship-card.component';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    TranslateModule
   ],
-  declarations: [SoftwareCraftsmanshipCardComponent, VisionComponent]
+  declarations: [VisionComponent]
 })
-export class VisionModule {}
+export class VisionModule {
+}

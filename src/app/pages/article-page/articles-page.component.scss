@@ -1,38 +1,100 @@
-.articles-title{
-  text-align: center;
-  font-family: arial, sans-serif;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  text-decoration: underline;
-  text-underline-offset: 0.25em;
-  color: #31525B;
-}
-
 .articles-container {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.article-container {
-  margin: auto;
-  max-width: 450px;
-}
-
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 768px) and (max-width: 1480px) {
   .articles-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .article-container {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1480px) and (max-width: 1992px) {
   .articles-container {
     grid-template-columns: repeat(3, 1fr);
-    padding-left: 5em;
-    padding-right: 5em;
+  }
+
+  .article-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1992px) and (max-width: 2504px) {
+  .articles-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .article-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 2504px) {
+  .articles-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .article-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 400px;
+  }
+}
+
+
+.page-title {
+  font-weight: 200;
+  padding: 2rem 5rem;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: #008073 !important;
+  color: #FFFFFF !important;
+}
+
+.header {
+  background-color: #31525b;
+  color: #fff;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: Roboto, serif;
+}
+
+.intro {
+  font-family: Roboto, sans-serif;
+  line-height: 1.7rem;
+}
+
+@media only screen and (max-width: 400px) {
+  .header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1000px) {
+  .header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .header {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }

@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { HomeComponent } from './home.component';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from '../../app-routing.module';
-import { FaqOptionComponent } from './faq-option/faq-option.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TranslateModule
   ],
-  declarations: [FaqOptionComponent, HomeComponent]
+  declarations: [HomeComponent]
 })
 export class HomeModule {}

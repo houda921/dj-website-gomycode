@@ -6,17 +6,19 @@ import {Observable} from 'rxjs';
 @Component({
   selector: 'my-articles',
   template: `
-    <div class="container-fluid pt-2 pb-2">
-      <h2 class="articles-title">ARTICLES</h2>
-      <ng-container *ngIf="articles$ | async as articles">
-        <div class="articles-container">
-          <article *ngFor="let article of articles"
-            class="article-container"
-            [article]="article">
-          </article>
-        </div>
-      </ng-container>
+    <h1 class='page-title'>Blog</h1>
+    <div class='header'>
+      <h2 class='title'>{{"blog.subtitle" | translate | titlecase }}</h2>
+      <span class='intro' translate='blog.intro'></span>
     </div>
+    <ng-container *ngIf="articles$ | async as articles">
+      <div class="articles-container">
+        <article *ngFor="let article of articles"
+          class="article-container"
+          [article]="article">
+        </article>
+      </div>
+    </ng-container>
   `,
   styleUrls: ['./articles-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

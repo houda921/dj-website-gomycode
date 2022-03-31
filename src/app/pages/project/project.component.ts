@@ -6,36 +6,27 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-projects',
   template: `
-    <div class="container-fluid pt-2">
-      <div class="project-wrapper">
-        <div class="card">
-          <div class="card-body">
-            <p class="pb-2">
-              Here you can find all professional projects Dieter has done in his career as a consultant.
-              The projects are sorted by start date, the most recent one first.
-            </p>
-            <div *ngIf="projects$ | async as projects" class="projects">
-              <div class="projects-line"></div>
-              <ng-container *ngFor="let project of projects; let index = index">
-                <app-projects-card
-                  [left]="isEven(index)"
-                  [project]="project"
-                ></app-projects-card>
-              </ng-container>
-            </div>
-          </div>
-        </div>
-      </div>
+    <h1 class='page-title' translate>projects.title</h1>
+    <div class='header'>
+      <h2 class='title'>
+        {{ "projects.subtitle" | translate | titlecase }}
+      </h2>
+      <span class='intro' translate>projects.intro</span>
+    </div>
+    <div class="projects" *ngIf="projects$ | async as projects">
+      <div class="projects-line"></div>
+      <ng-container *ngFor="let project of projects; let index = index">
+        <app-projects-card
+          [left]="isEven(index)"
+          [project]="project"
+        ></app-projects-card>
+      </ng-container>
     </div>
   `,
   styles: [
     `
-      .project-wrapper {
-        padding-left: 10%;
-        padding-right: 10%;
-      }
-
       .projects {
+        padding: 2rem;
         position: relative;
       }
 
@@ -71,10 +62,52 @@ import { Observable } from 'rxjs';
         .projects-line {
           display: none;
         }
+      }
 
-        .project-wrapper {
-          padding-left: unset;
-          padding-right: unset;
+      .page-title {
+        font-weight: 200;
+        padding: 2rem 5rem;
+        text-transform: uppercase;
+        margin: 0;
+        background-color: #008073 !important;
+        color: #FFFFFF !important;
+      }
+
+      .header {
+        background-color: #31525b;
+        color: #fff;
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+      }
+
+      .title {
+        font-size: 3rem;
+        font-family: Roboto, serif;
+      }
+
+      .intro {
+        font-family: Roboto, sans-serif;
+        line-height: 1.7rem;
+      }
+
+      @media only screen and (max-width: 400px) {
+        .header {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
+
+      @media only screen and (min-width: 401px) and (max-width: 1000px) {
+        .header {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+
+      @media only screen and (min-width: 1001px) {
+        .header {
+          padding-left: 5rem;
+          padding-right: 5rem;
         }
       }
     `
